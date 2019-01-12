@@ -1,0 +1,31 @@
+world:
+  daytimeChange: false
+  blockChange: false
+  weatherChange: false
+spawn:
+  animals: false
+  monsters: false
+  npcs: false
+  others: false
+player:
+  blockInventory: true
+  damage:
+    take: false
+    refill: true
+  hunger:
+    take: false
+    refill: true
+  pvp: false
+  pve:
+    make: false
+    take: false
+  joinactions:
+    - '!GameMode:2'
+    - '!Hotbar:default'
+    - '!Scoreboard:default'
+    - '!ShowPlayers:'
+    - '!Waypoint:spawn'
+chat:
+  disable:
+    joinMessage: true
+    quitMessage: true

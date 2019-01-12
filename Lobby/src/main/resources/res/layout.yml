@@ -1,0 +1,25 @@
+prefix: "&b&lCloudNet&6&lLobby &8»&7 "
+teleport:
+  spawn: "{this:teleport.other}"
+  other: "{this:prefix}You were sent to &b%0&7."
+connecting:
+  lobby: "{this:connecting.server}"
+  server: "{this:prefix}Connecting to &b%0&7..."
+waypoint:
+  not-exist: "{this:prefix}&cThis waypoint does not exist!"
+join: "{this:prefix}%0&7 joined the game."
+quit: "{this:prefix}%0&7 left the game."
+help:
+  reload: "Reloads the lobby system."
+  setspawn: "Sets the spawnpoint."
+  setwaypoint: "Sets a waypoint."
+  remwaypoint: "Removes a waypoint."
+reload: "{this:prefix}Plugin reloaded!"
+setspawn: "{this:prefix}Spawn set!"
+setwaypoint: "{this:prefix}Waypoint &b%0&7 set."
+remwaypoint: "{this:prefix}Waypoint &b%0&7 removed."
+gamemode-updated: '{this:prefix}Your gamemode has been updated to &b%0 Mode&7.'
+error:
+  unknown: '{this:prefix}&cAn error occurred while performing this action! See console for details.'
+  usage: '{this:prefix}&cWrong usage! Please use /%0 help'
+  permission: '{this:prefix}&cYou do not have permission for this!'

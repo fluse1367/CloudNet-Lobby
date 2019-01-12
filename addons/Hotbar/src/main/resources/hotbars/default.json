@@ -1,0 +1,60 @@
+{
+  "title": "",
+  "content": {
+    "hider": {
+      "slot": 1,
+      "item": {
+        "id": 351,
+        "durability": "${?${PlayersShowing}=All:(10)else(${?${PlayersShowing}=OnlyFriends:(9)else(8)})}",
+        "amount": 1,
+        "name": "&b» ${?${PlayersShowing}=All:(&aShow &cOnly Friends)else(${?${PlayersShowing}=OnlyFriends:(&cHide Players)else(&aShow All Players)})}",
+        "lore": [
+          "&7Showing currently",
+          "${?${PlayersShowing}=All:(&aAll Players)else(${?${PlayersShowing}=OnlyFriends:(&cOnly Friends)else(&cNo Other Players)})}"
+        ],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": null,
+        "right": [
+          "ShowPlayers:${?${PlayersShowing}=All:(OnlyFriends)else(${?${PlayersShowing}=OnlyFriends:(None)else(All)})}",
+          "Hotbar:~reload"
+        ]
+      }
+    },
+    "navigator": {
+      "slot": 4,
+      "item": {
+        "id": 345,
+        "durability": 0,
+        "amount": 1,
+        "name": "&b» &9Navigator",
+        "lore": [],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": null,
+        "right": [
+          "Menu:navigation"
+        ]
+      }
+    },
+    "lobbyswitcher": {
+      "slot": 7,
+      "item": {
+        "id": 399,
+        "durability": 0,
+        "amount": 1,
+        "name": "&b» &9Lobby Switcher",
+        "lore": [],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": null,
+        "right": [
+          "Menu:lobbys"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "rows": 6,
+  "title": "&b» &cNavigation",
+  "content": {
+    "item": {
+      "location": {
+        "row": 2,
+        "column": 5
+      },
+      "item": {
+        "id": 2,
+        "durability": 0,
+        "amount": 1,
+        "name": "&a» &b&lSpawn",
+        "lore": [
+          "Click to teleport"
+        ],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": [
+          "Waypoint:spawn"
+        ],
+        "right": null
+      }
+    }
+  }
+}

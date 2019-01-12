@@ -1,0 +1,129 @@
+{
+  "rows": 3,
+  "title": "&b» &cPlayer-Hider",
+  "content": {
+    "frames${i;Count:0,26}": {
+      "location": {
+        "row": 1,
+        "column": 1
+      },
+      "item": {
+        "id": 160,
+        "durability": 7,
+        "amount": 1,
+        "name": " ",
+        "lore": [],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": null,
+        "right": null
+      }
+    },
+    "indi0": {
+      "location": {
+        "row": 1,
+        "column": "${?${PlayersShowing}=All:(3)else(${?${PlayersShowing}=OnlyFriends:(5)else(7)})}"
+      },
+      "item": {
+        "id": 160,
+        "durability": 14,
+        "amount": 1,
+        "name": " ",
+        "lore": [],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": null,
+        "right": null
+      }
+    },
+    "indi1": {
+      "location": {
+        "row": 3,
+        "column": "${?${PlayersShowing}=All:(3)else(${?${PlayersShowing}=OnlyFriends:(5)else(7)})}"
+      },
+      "item": {
+        "id": 160,
+        "durability": 14,
+        "amount": 1,
+        "name": " ",
+        "lore": [],
+        "enchantments": []
+      },
+      "clickaction": {
+        "left": null,
+        "right": null
+      }
+    },
+    "showall": {
+      "location": {
+        "row": 2,
+        "column": 3
+      },
+      "item": {
+        "id": 351,
+        "durability": 10,
+        "amount": 1,
+        "name": "&a» &aShow &9All Players",
+        "lore": [],
+        "enchantments": [
+          "${?${PlayersShowing}=All:(34:1)}"
+        ]
+      },
+      "clickaction": {
+        "left": [
+          "ShowPlayers:All",
+          "Menu:~reload"
+        ],
+        "right": null
+      }
+    },
+    "showonlyfriends": {
+      "location": {
+        "row": 2,
+        "column": 5
+      },
+      "item": {
+        "id": 351,
+        "durability": 7,
+        "amount": 1,
+        "name": "&a» &aShow &cOnly Friends",
+        "lore": [],
+        "enchantments": [
+          "${?${PlayersShowing}=OnlyFriends:(34:1)}"
+        ]
+      },
+      "clickaction": {
+        "left": [
+          "ShowPlayers:OnlyFriends",
+          "Menu:~reload"
+        ],
+        "right": null
+      }
+    },
+    "shownone": {
+      "location": {
+        "row": 2,
+        "column": 7
+      },
+      "item": {
+        "id": 351,
+        "durability": 8,
+        "amount": 1,
+        "name": "&a» &cHide All Players",
+        "lore": [],
+        "enchantments": [
+          "${?${PlayersShowing}=None:(34:1)}"
+        ]
+      },
+      "clickaction": {
+        "left": [
+          "ShowPlayers:None",
+          "Menu:~reload"
+        ],
+        "right": null
+      }
+    }
+  }
+}

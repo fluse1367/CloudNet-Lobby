@@ -1,0 +1,21 @@
+{
+  "title": "&bCloudNet-Lobby",
+  "updateIntervall": 1,
+  "content": {
+    "15": "",
+    "14": "",
+    "13": " ",
+    "12": "&b Hello,",
+    "11": "&7    ${Player:Name}",
+    "10": "  ",
+    "9": "&b Server",
+    "8": "&7    ${Server:Name}",
+    "7": "   ",
+    "6": "&b Time",
+    "5": "&9    ${RealTime:HH:mm:ss}",
+    "4": "",
+    "3": "",
+    "2": "",
+    "1": ""
+  }
+}

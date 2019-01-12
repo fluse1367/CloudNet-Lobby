@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eu.software4you.minecraft.cloudnetlobby</groupId>
+    <artifactId>CloudNet-Lobby</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <modules>
+        <module>Lobby</module>
+        <module>addons/Connect</module>
+        <module>addons/Gamemode</module>
+        <module>addons/Hotbar</module>
+        <module>addons/Inventory</module>
+        <module>addons/Menu</module>
+        <module>addons/PlayerCommand</module>
+        <module>addons/PlayerHider</module>
+        <module>addons/Waypoint</module>
+        <module>addons/HeldSlot</module>
+        <module>addons/IsFriend</module>
+        <module>addons/Player</module>
+        <module>addons/Server</module>
+        <module>addons/Scoreboard</module>
+        <module>addons/RealTime</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>software4you-repo</id>
+            <url>https://repo.software4you.eu/repo</url>
+        </repository>
+        <repository>
+            <id>cloudnet-repo</id>
+            <url>https://cloudnetservice.eu/repositories</url>
+        </repository>
+        <repository>
+            <id>placeholderapi-repo</id>
+            <url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>eu.software4you.mcutils</groupId>
+            <artifactId>mcutils</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>de.dytanic.cloudnet</groupId>
+            <artifactId>cloudnet-api-bridge</artifactId>
+            <version>2.1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>ftp-repo</id>
+            <url>ftp://software4you.eu/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>RELEASE</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+</project>
