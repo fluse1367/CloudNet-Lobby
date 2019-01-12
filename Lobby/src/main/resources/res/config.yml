@@ -19,12 +19,12 @@ player:
   pve:
     make: false
     take: false
-  joinactions:
-    - '!GameMode:2'
-    - '!Hotbar:default'
-    - '!Scoreboard:default'
-    - '!ShowPlayers:'
-    - '!Waypoint:spawn'
+  joinactions: []
+    #- '!GameMode:2'
+    #- '!Hotbar:default'
+    #- '!Scoreboard:default'
+    #- '!ShowPlayers:'
+  #- '!Waypoint:spawn'
 chat:
   disable:
     joinMessage: true
