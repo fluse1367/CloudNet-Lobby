@@ -55,7 +55,7 @@ public class LobbyCommandHandler {
         return CommandResult.NONE;
     }
 
-    @BaseCommand(command = "clobby", sender = BaseCommand.Sender.PLAYER, permission = "lobby.setspawn", subCommand = "setwaypoint")
+    @BaseCommand(command = "clobby", sender = BaseCommand.Sender.PLAYER, permission = "lobby.setwaypoint", subCommand = "setwaypoint")
     public CommandResult executeSubSetWaypointPlayer(Player sender, CommandArgs args) {
         if (args.isEmpty())
             return CommandResult.USAGEERROR;
@@ -65,7 +65,7 @@ public class LobbyCommandHandler {
         return CommandResult.NONE;
     }
 
-    @BaseCommand(command = "clobby", sender = BaseCommand.Sender.PLAYER, permission = "lobby.setspawn", subCommand = "remwaypoint")
+    @BaseCommand(command = "clobby", sender = BaseCommand.Sender.PLAYER, permission = "lobby.remwaypoint", subCommand = "remwaypoint")
     public CommandResult executeSubRemWaypointPlayer(Player sender, CommandArgs args) {
         if (args.isEmpty())
             return CommandResult.USAGEERROR;

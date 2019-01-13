@@ -25,7 +25,7 @@ public class Server extends Placeholder {
         switch (cmd) {
             case "IsOnline":
                 return si != null ? String.valueOf(si.isOnline()) : "false";
-            case "MTOD":
+            case "MOTD":
                 return si != null ? si.getMotd() : "null";
             case "Players":
                 return si != null ? String.valueOf(si.getOnlineCount()) : "-1";
