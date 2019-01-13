@@ -1,5 +1,5 @@
 # CloudNet-Lobby
-This Plugin depends on McUtils which you can obtain <a href="https://software4you.eu/prods/utils.php" target="_blank">here</a>.
+This Plugin depends on McUtils which you can obtain <a href="https://software4you.eu/prods/utils.php" target="_blank">here</a>.<br>
 You can find the official SpigotMC resource <a href="https://www.spigotmc.org/resources/cloudnet-lobby.63985/" target="_blank">here</a>.
 
 CloudNet-Lobby is a module-based (lobby-) system. What does module-based mean? The Lobby-System is only the base for the modules (like Spigot is the base for plugins).
