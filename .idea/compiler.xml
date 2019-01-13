@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CloudNetLobby" />
         <module name="Connect" />
+        <module name="Count" />
         <module name="Gamemode" />
         <module name="HeldSlot" />
         <module name="Hotbar" />
@@ -20,6 +21,7 @@
         <module name="RealTime" />
         <module name="Scoreboard" />
         <module name="Server" />
+        <module name="ServerGroups" />
         <module name="Waypoint" />
       </profile>
     </annotationProcessing>

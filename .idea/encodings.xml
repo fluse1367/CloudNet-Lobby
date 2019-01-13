@@ -3,8 +3,8 @@
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Lobby" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Lobby" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/Connect" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/addons/Count" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/Gamemode" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/HeldSlot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/Hotbar" charset="UTF-8" />
@@ -17,6 +17,7 @@
     <file url="file://$PROJECT_DIR$/addons/RealTime" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/Scoreboard" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/Server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/addons/ServerGroups" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/addons/Waypoint" charset="UTF-8" />
   </component>
 </project>

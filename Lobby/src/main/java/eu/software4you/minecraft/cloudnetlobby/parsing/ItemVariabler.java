@@ -1,6 +1,5 @@
 package eu.software4you.minecraft.cloudnetlobby.parsing;
 
-import de.dytanic.cloudnet.api.CloudAPI;
 import eu.software4you.minecraft.ItemAPI;
 import org.apache.commons.configuration2.JSONConfiguration;
 import org.bukkit.Material;
@@ -9,8 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class ItemVariabler {
     private final JSONConfiguration json;
@@ -77,32 +76,10 @@ public abstract class ItemVariabler {
         }
     }
 
-    private List<String> list(String support, String arg) {
-        List<String> li = new ArrayList<>();
-        switch (support) {
-            case "ServerGroups":
-                AtomicInteger online = new AtomicInteger(0);
-                CloudAPI.getInstance().getServers(arg).forEach(si -> {
-                    if (si.isOnline())
-                        online.incrementAndGet();
-                });
-                for (int i = 0; i < online.get(); i++)
-                    li.add(arg + "-" + (i + 1));
-                break;
-            case "Count":
-                if (arg.contains(",")) {
-                    int a = Integer.valueOf(arg.split(",")[0]);
-                    int b = Integer.valueOf(arg.split(",")[1]);
-                    for (int i = a; a <= b; a++)
-                        li.add(String.valueOf(i));
-                }
-                break;
-            case "None":
-            default:
-                li.add("$");
-                break;
-        }
-        return li;
+    private List<String> list(String id, String arg) {
+        if (!eu.software4you.minecraft.cloudnetlobby.addons.List.isRegistered(id))
+            return new ArrayList<>(Arrays.asList("$"));
+        return eu.software4you.minecraft.cloudnetlobby.addons.List.list(caller, id, arg);
     }
 
     public abstract void item(int slot, ItemStack stack);
