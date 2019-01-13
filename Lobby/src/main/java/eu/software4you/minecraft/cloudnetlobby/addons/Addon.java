@@ -69,6 +69,7 @@ public abstract class Addon {
     }
 
     public final YamlConfiguration getConfig() {
+        FileUtils.createNewFile(this.configFile);
         return this.config;
     }
 
