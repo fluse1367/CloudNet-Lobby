@@ -240,13 +240,13 @@ public class Lobby extends JavaPlugin {
         }
         Constructor constructor;
         try {
-            constructor = clazz.getDeclaredConstructor(Lobby.class);
+            constructor = clazz.getDeclaredConstructor();
         } catch (NoSuchMethodException e) {
-            throw new Exception("Constructor of " + main + " must have only eu.software4you.cloudnetlobby.Lobby as parameter");
+            throw new Exception("Constructor of " + main + " must have no parameters");
         }
         constructor.setAccessible(true);
 
-        Object instance = constructor.newInstance(this);
+        Object instance = constructor.newInstance();
         if (!(instance instanceof Addon))
             throw new Exception("Main class must be an instance of eu.software4you.cloudnetlobby.addons.Addon");
         return instance;
