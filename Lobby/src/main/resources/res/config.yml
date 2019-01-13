@@ -1,31 +1,31 @@
 world:
-  daytimeChange: false
-  blockChange: false
-  weatherChange: false
+  daytimeChange: false # Should the server have a daytime cycle (day and night)
+  blockChange: false # Should block changes (and block placing and breakings) be allowed?
+  weatherChange: false # Should the server be able to change between different weathers?
 spawn:
-  animals: false
-  monsters: false
-  npcs: false
-  others: false
+  animals: false # Should animals spawn?
+  monsters: false # Should monsters spawn?
+  npcs: false # Should npcs spawn?
+  others: false # Should other creatures spawn?
 player:
-  blockInventory: true
+  blockInventory: true # Should the inventory of player be blocked (that they cannot move items, etc.)?
   damage:
-    take: false
-    refill: true
+    take: false # Should players take damage?
+    refill: true # Should the players health be refilled?
   hunger:
-    take: false
-    refill: true
-  pvp: false
+    take: false # Should players take hunger?
+    refill: true # Should the players food-bar be refilled?
+  pvp: false # Should players be able to hit other players?
   pve:
-    make: false
-    take: false
-  joinactions: []
-    #- '!GameMode:2'
-    #- '!Hotbar:default'
-    #- '!Scoreboard:default'
-    #- '!ShowPlayers:'
-  #- '!Waypoint:spawn'
+    make: false # Should players be able to hit non-player entities?
+    take: false # Should players take damage from other entities (e.g. Zombie)?
+  joinactions: [] # If you uncomment a line here, or add another one, you have to remove the []
+    #- '!GameMode:2' # Sets the gamemode to adventure mode
+    #- '!Hotbar:default' # Gives the player the default hotbar
+    #- '!Scoreboard:default' # Gives the player the default scoreboard
+    #- '!ShowPlayers:' # Hides the players that should be hidden and show the players that sould be shown
+  #- '!Waypoint:spawn' # Teleports the player to the spawn
 chat:
   disable:
-    joinMessage: true
-    quitMessage: true
+    joinMessage: true # Should the join message be disabled?
+    quitMessage: true # Should the quit message be disabled?
