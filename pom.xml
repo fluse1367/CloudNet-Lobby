@@ -11,20 +11,22 @@
 
     <modules>
         <module>Lobby</module>
-        <module>addons/Connect</module>
-        <module>addons/Gamemode</module>
-        <module>addons/Hotbar</module>
-        <module>addons/Inventory</module>
-        <module>addons/Menu</module>
-        <module>addons/PlayerCommand</module>
-        <module>addons/PlayerHider</module>
-        <module>addons/Waypoint</module>
-        <module>addons/HeldSlot</module>
-        <module>addons/IsFriend</module>
         <module>addons/Player</module>
         <module>addons/Server</module>
+        <module>addons/Waypoint</module>
+        <module>addons/Hotbar</module>
+        <module>addons/Menu</module>
         <module>addons/Scoreboard</module>
+        <module>addons/Inventory</module>
+        <module>addons/Connect</module>
+        <module>addons/Gamemode</module>
+        <module>addons/PlayerCommand</module>
+        <module>addons/PlayerHider</module>
+        <module>addons/HeldSlot</module>
+        <module>addons/IsFriend</module>
         <module>addons/RealTime</module>
+        <module>addons/ServerGroups</module>
+        <module>addons/Count</module>
     </modules>
 
     <repositories>
@@ -51,11 +53,6 @@
             <groupId>eu.software4you.mcutils</groupId>
             <artifactId>mcutils</artifactId>
             <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>de.dytanic.cloudnet</groupId>
-            <artifactId>cloudnet-api-bridge</artifactId>
-            <version>2.1.14</version>
         </dependency>
         <dependency>
             <groupId>me.clip</groupId>
