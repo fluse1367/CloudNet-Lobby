@@ -114,7 +114,7 @@
         "name": "&a» &cHide All Players",
         "lore": [],
         "enchantments": [
-          "${?${PlayersShowing}=None:(34:1)}"
+          "${?${PlayersShowing}=None:(unbreaking:1)}"
         ]
       },
       "clickaction": {
