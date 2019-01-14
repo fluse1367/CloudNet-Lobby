@@ -57,11 +57,17 @@ public abstract class ItemVariabler {
             for (String ench : v.jsonStringList("enchantments")) {
                 if (ench == null || ench.equals(""))
                     continue;
-                int eId = Integer.valueOf(ench.substring(0, ench.indexOf(":")));
-                int eLevel = Integer.valueOf(ench.substring(ench.indexOf(":") + 1));
-                enchantments.add(new ItemAPI.EntchantmentStore(Enchantment.getById(eId), eLevel));
+                String enchantmentKey = ench.substring(0, ench.indexOf(":"));
+                int enchantmentLevel = Integer.valueOf(ench.substring(ench.indexOf(":") + 1));
+                Enchantment enchantment = ItemAPI.getEnchantmentByKey(enchantmentKey);
+                if (enchantment == null)
+                    throw new Exception("Could not find Enchantment " + enchantmentKey);
+                enchantments.add(new ItemAPI.EntchantmentStore(enchantment, enchantmentLevel));
             }
-            ItemStack stack = ItemAPI.genItem(Material.getMaterial(material), name, lore, durability, amount, true, enchantments);
+            Material mat = ItemAPI.getMaterialById(material);
+            if (mat == null)
+                throw new Exception("Could not find Material " + id);
+            ItemStack stack = ItemAPI.genItem(mat, name, lore, durability, amount, true, enchantments);
 
             v.setPrefix(key + ".");
             String action = "";
