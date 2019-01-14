@@ -8,10 +8,10 @@
         <groupId>eu.software4you.minecraft.cloudnetlobby</groupId>
         <artifactId>CloudNet-Lobby</artifactId>
         <version>1.0</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>CloudNetLobby</artifactId>
+    <version>1.1</version>
 
     <build>
         <plugins>

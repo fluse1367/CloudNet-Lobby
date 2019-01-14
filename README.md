@@ -30,7 +30,7 @@ You can also use this system on non-lobby servers, just disable (or enable) ever
     <dependency>
       <groupId>eu.software4you.minecraft.cloudnetlobby</groupId>
       <artifactId>CloudNetLobby</artifactId>
-      <version>1.0</version>
+      <version>1.1</version>
     </dependency>
     ...
   </dependencies>

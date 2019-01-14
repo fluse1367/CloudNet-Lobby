@@ -35,10 +35,6 @@
             <url>https://repo.software4you.eu/repo</url>
         </repository>
         <repository>
-            <id>paper-repo</id>
-            <url>https://papermc.io/repo/repository/maven-public/</url>
-        </repository>
-        <repository>
             <id>cloudnet-repo</id>
             <url>https://cloudnetservice.eu/repositories</url>
         </repository>
@@ -52,17 +48,12 @@
         <dependency>
             <groupId>eu.software4you.mcutils</groupId>
             <artifactId>mcutils</artifactId>
-            <version>1.0</version>
+            <version>RELEASE</version>
         </dependency>
         <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>2.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.destroystokyo.paper</groupId>
-            <artifactId>paper-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
