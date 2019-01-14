@@ -51,6 +51,7 @@ public class Hotbar extends Action {
     @Override
     protected void load() {
         new File(getDataFolder(), "hotbars").mkdirs();
+        saveResource("hotbars/default.json", false);
         try {
             for (File hotbar : new File(getDataFolder(), "hotbars").listFiles(f -> f.getName().endsWith(".json"))) {
                 JSONConfiguration json = new FileBasedConfigurationBuilder<>(JSONConfiguration.class).configure(new Parameters().fileBased().setFile(hotbar)).getConfiguration();

@@ -1,1 +1,1 @@
-main: eu.software4you.cloudnetlobby.actions.PlayerCommand
+main: eu.software4you.minecraft.cloudnetlobby.actions.PlayerCommand

@@ -1,4 +1,4 @@
-main: eu.software4you.cloudnetlobby.Lobby
+main: eu.software4you.minecraft.cloudnetlobby.Lobby
 name: CloudNet-Lobby
 version: 1.1
 depend: [McUtils]

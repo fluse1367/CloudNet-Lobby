@@ -1,4 +1,4 @@
-package eu.software4you.cloudnetlobby.lists;
+package eu.software4you.minecraft.cloudnetlobby.lists;
 
 import eu.software4you.minecraft.cloudnetlobby.addons.List;
 import org.bukkit.entity.Player;

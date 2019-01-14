@@ -89,6 +89,14 @@ public abstract class Addon {
         }
     }
 
+    public final void saveResource(String file, boolean replace) {
+        File f = new File(getDataFolder(), file);
+        File p = new File(f.getParent());
+        if (!p.exists())
+            p.mkdirs();
+        FileUtils.saveResource(getClass(), file, p.getPath(), replace, true);
+    }
+
     protected abstract void load() throws Exception;
 
     protected abstract void unload() throws Exception;

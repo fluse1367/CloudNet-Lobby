@@ -50,6 +50,9 @@ public class Menu extends Action {
     @Override
     protected void load() {
         new File(getDataFolder(), "menus").mkdirs();
+        saveResource("menus/lobbies.json", false);
+        saveResource("menus/navigation.json", false);
+        saveResource("menus/playerhider.json", false);
         try {
             for (File menu : new File(getDataFolder(), "menus").listFiles(f -> f.getName().endsWith(".json"))) {
                 JSONConfiguration json = new FileBasedConfigurationBuilder<>(JSONConfiguration.class).configure(new Parameters().fileBased().setFile(menu)).getConfiguration();

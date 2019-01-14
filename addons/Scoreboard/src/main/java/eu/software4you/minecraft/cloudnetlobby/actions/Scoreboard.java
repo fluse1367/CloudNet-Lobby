@@ -47,6 +47,7 @@ public class Scoreboard extends Action {
     @Override
     protected void load() {
         new File(getDataFolder(), "scoreboards").mkdirs();
+        saveResource("scoreboards/default.json", false);
         try {
             for (File file : new File(getDataFolder(), "scoreboards").listFiles(f -> f.getName().endsWith(".json"))) {
                 JSONConfiguration json = new FileBasedConfigurationBuilder<>(JSONConfiguration.class).configure(new Parameters().fileBased().setFile(file)).getConfiguration();

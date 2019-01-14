@@ -27,6 +27,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.*;
@@ -186,8 +187,15 @@ public class Lobby extends JavaPlugin {
     private void loadAddons() throws Exception {
 
         Field field = Addon.class.getDeclaredField("lobby");
+
         field.setAccessible(true);
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+
         field.set(null, this);
+
 
         List<Addon> loadedAddons = new ArrayList<>();
 
@@ -248,7 +256,7 @@ public class Lobby extends JavaPlugin {
 
         Object instance = constructor.newInstance();
         if (!(instance instanceof Addon))
-            throw new Exception("Main class must be an instance of eu.software4you.cloudnetlobby.addons.Addon");
+            throw new Exception("Main class must be an instance of eu.software4you.minecraft.cloudnetlobby.addons.Addon");
         return instance;
     }
 

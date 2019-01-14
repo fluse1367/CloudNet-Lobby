@@ -20,11 +20,12 @@ player:
     make: false # Should players be able to hit non-player entities?
     take: false # Should players take damage from other entities (e.g. Zombie)?
   joinactions: [] # If you uncomment a line here, or add another one, you have to remove the []
-    #- '!GameMode:2' # Sets the gamemode to adventure mode
-    #- '!Hotbar:default' # Gives the player the default hotbar
-    #- '!Scoreboard:default' # Gives the player the default scoreboard
-    #- '!ShowPlayers:' # Hides the players that should be hidden and show the players that sould be shown
-  #- '!Waypoint:spawn' # Teleports the player to the spawn
+  #  - '!GameMode:2' # Sets the gamemode to adventure mode
+  #  - '!Hotbar:default' # Gives the player the default hotbar
+  #  - '!Scoreboard:default' # Gives the player the default scoreboard
+  #  - '!ShowPlayers:' # Hides the players that should be hidden and show the players that sould be shown
+  #  - '!Waypoint:spawn' # Teleports the player to the spawn
+
 chat:
   disable:
     joinMessage: true # Should the join message be disabled?
