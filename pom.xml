@@ -23,7 +23,6 @@
         <module>addons/PlayerCommand</module>
         <module>addons/PlayerHider</module>
         <module>addons/HeldSlot</module>
-        <module>addons/IsFriend</module>
         <module>addons/RealTime</module>
         <module>addons/ServerGroups</module>
         <module>addons/Count</module>
