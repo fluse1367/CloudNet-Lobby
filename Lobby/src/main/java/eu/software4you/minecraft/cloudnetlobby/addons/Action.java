@@ -10,6 +10,8 @@ public abstract class Action extends Addon {
     public static void call(Player caller, String id, String arg) throws Exception {
         boolean quit = id.startsWith("!");
         if (quit) id = id.substring(1);
+        if (id.equals(""))
+            return;
         validateRegistered(id, "Tried to call a non-registered action ('" + id + "')");
         Addon addon = registeredAddons.get(id);
         if (!(addon instanceof Action))
