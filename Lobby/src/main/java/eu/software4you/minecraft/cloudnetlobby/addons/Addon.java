@@ -21,7 +21,11 @@ public abstract class Addon {
         this.id = id;
         this.dataFolder = new File(lobby.getDataFolder(), "addons/" + this.id);
         this.configFile = new File(this.dataFolder, "config.yml");
-        this.config = new YamlConfiguration();
+        if (configFile.exists())
+            this.config = YamlConfiguration.loadConfiguration(this.configFile);
+        else
+            this.config = new YamlConfiguration();
+
     }
 
     protected static void registerAddon(Addon addon) throws Exception {
