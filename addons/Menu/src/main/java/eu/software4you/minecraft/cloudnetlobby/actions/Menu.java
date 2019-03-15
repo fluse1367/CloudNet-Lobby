@@ -167,11 +167,14 @@ public class Menu extends Action {
             for (final String key : JSONConfigurationUtils.getKeys(json, "content", false)) {
                 final String id = key.substring(key.lastIndexOf(".") + 1);
 
-                int row = Integer.valueOf(Lobby.replace(caller, String.valueOf(json.getProperty(key + ".location.row"))));
-                int column = Integer.valueOf(Lobby.replace(caller, String.valueOf(json.getProperty(key + ".location.column"))));
-                int slot = (row - 1) * 9 + column - 1;
+                if (!Lobby.replace(caller, String.valueOf(json.getProperty(key + ".disabled"))).equals("true")) {
+                    int row = Integer.valueOf(Lobby.replace(caller, String.valueOf(json.getProperty(key + ".location.row"))));
+                    int column = Integer.valueOf(Lobby.replace(caller, String.valueOf(json.getProperty(key + ".location.column"))));
+                    int slot = (row - 1) * 9 + column - 1;
 
-                iv.iteration(id, slot);
+                    iv.iteration(id, slot);
+                }
+
             }
         }
 

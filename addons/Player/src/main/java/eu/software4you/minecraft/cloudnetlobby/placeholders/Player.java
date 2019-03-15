@@ -10,7 +10,7 @@ public class Player extends Placeholder {
     @Override
     protected String replace(org.bukkit.entity.Player caller, String arg) {
         String cmd = arg.contains(":") ? arg.substring(0, arg.indexOf(":")) : arg;
-        arg = arg.substring(cmd.length());
+        arg = arg.contains(":") ? arg.substring(cmd.length() + 1) : "";
 
         switch (cmd) {
             case "Name":
